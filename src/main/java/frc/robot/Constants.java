@@ -1,12 +1,20 @@
 package frc.robot;
 
+import static edu.wpi.first.units.Units.Degrees;
+import static edu.wpi.first.units.Units.RPM;
+
+import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.units.Units;
+import edu.wpi.first.units.measure.Angle;
 import edu.wpi.first.units.measure.AngularAcceleration;
 import edu.wpi.first.units.measure.AngularVelocity;
 import edu.wpi.first.units.measure.Current;
 import edu.wpi.first.units.measure.Distance;
+import edu.wpi.first.units.measure.Current;
+import edu.wpi.first.units.measure.Distance;
 import edu.wpi.first.units.measure.LinearVelocity;
 import edu.wpi.first.units.measure.Time;
+import edu.wpi.first.units.measure.Velocity;
 import frc.lib.util.FeedforwardGains;
 import frc.lib.util.PIDGains;
 
@@ -46,4 +54,21 @@ public class Constants {
 
     public static final int MOTOR_ID = 0;
   }
+
+  public static class IntakePivotConstants {
+    public static final int PIVOT_MOTOR_ID = 9997; 
+    public static final int PID_kP = 0;
+    public static final int PID_kV = 0;
+    public static final Angle OUT_POSITION = Angle.ofBaseUnits(10, Degrees);
+    public static final Angle START_POSITION = Angle.ofBaseUnits(0, Degrees);
+  }
+
+  public static class IntakeConstants {
+    public static final int INTAKE_MOTOR_ID = 9998;
+    public static final int PID_kP = 0;
+    public static final int PID_kV = 0;
+    
+    public static final AngularVelocity INTAKE_VELOCITY = AngularVelocity.ofBaseUnits(0, RPM);
+  }
+
 }
